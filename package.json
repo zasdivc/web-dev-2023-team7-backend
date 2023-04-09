@@ -1,0 +1,19 @@
+{
+  "name": "web-dev-2023-team7-backend",
+  "version": "1.0.0",
+  "description": "Node js backend for team 7 group project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zasdivc/web-dev-2023-team7-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zasdivc/web-dev-2023-team7-backend/issues"
+  },
+  "homepage": "https://github.com/zasdivc/web-dev-2023-team7-backend#readme"
+}
