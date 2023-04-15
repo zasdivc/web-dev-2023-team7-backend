@@ -9,16 +9,22 @@ const AuthController = (app) => {
     };
 
     const register = async (req, res) => {
-        const username = req.body.username;
-        const password = req.body.password;
-        const user = await usersDao
-            .findUserByUsername(username);
+        const { username, password, firstName, lastName, email } = req.body;
+        
+        const user = await usersDao.findUserByUsername(username);
         if (user) {
             res.sendStatus(409);
             return;
         }
-        const newUser = await usersDao
-            .createUser(req.body);
+        
+        const newUser = await usersDao.createUser({
+            username,
+            password,
+            firstName,
+            lastName,
+            email
+        });
+        
         req.session["currentUser"] = newUser;
         res.json(newUser);
     };
