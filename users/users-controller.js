@@ -9,7 +9,7 @@ const AuthController = (app) => {
     };
 
     const register = async (req, res) => {
-        const { username, password, firstName, lastName, email } = req.body;
+        const { username, password, firstName, lastName, email, role } = req.body;
         
         const user = await usersDao.findUserByUsername(username);
         if (user) {
@@ -22,7 +22,8 @@ const AuthController = (app) => {
             password,
             firstName,
             lastName,
-            email
+            email,
+            role
         });
         
         req.session["currentUser"] = newUser;
