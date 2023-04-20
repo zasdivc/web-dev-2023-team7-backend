@@ -35,4 +35,4 @@ function LikesController(app) {
     app.delete("/api/likes/:likeId", deleteLike);
 }
 
-export default CommentsController;
+export default LikesController;
