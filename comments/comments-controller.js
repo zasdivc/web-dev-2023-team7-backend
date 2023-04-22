@@ -12,17 +12,11 @@ function CommentsController(app) {
     }
 
     const findCommentsByUserId = async (req, res) => {
-        // const currentUser = req.session["currentUser"];
         const userId = req.params.userId;
         const comments = await commentsDao.findCommentsByUserId(userId);
         res.send(comments);
     };
     const createComment = async (req, res) => {
-        // const currentUser = req.session["currentUser"];
-        // if (!currentUser) {
-        //     res.sendStatus(403);
-        //     return;
-        // }
         const comment = req.body;
         const newComment = await commentsDao.createComment(comment);
         res.json(newComment);
