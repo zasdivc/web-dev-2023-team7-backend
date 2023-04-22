@@ -32,7 +32,7 @@ function LikesController(app) {
         res.send(status);
     };
 
-    app.get("api/likes/user/:userId", findLikesByUserId);
+    app.get("/api/likes/user/:userId", findLikesByUserId);
     app.get("/api/likes/track/:trackId/:userId", findLikesByTrackIdAndUserId);
     app.post("/api/likes", createLike);
     app.delete("/api/likes/:likeId", deleteLike);
